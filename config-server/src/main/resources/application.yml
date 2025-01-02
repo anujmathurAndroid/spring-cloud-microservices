@@ -5,4 +5,4 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/spring-cloud-microservices/spring-cloud-config-repo
+          uri: https://github.com/anujmathurAndroid/spring-cloud-microservices
