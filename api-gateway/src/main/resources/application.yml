@@ -1,13 +1,19 @@
 server:
   port: 8080
+
 spring:
   cloud:
     gateway:
       routes:
+        - id: department-service
+          uri: lb://department-service
+          predicates:
+            - Path=/departments/**
         - id: employee-service
-          uri: lb://EMPLOYEE-SERVICE
+          uri: lb://employee-service
           predicates:
             - Path=/employees/**
+
 eureka:
   client:
     service-url:
